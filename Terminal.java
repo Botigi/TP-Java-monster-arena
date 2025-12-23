@@ -1,7 +1,6 @@
 public class Terminal implements Observateur {
     @Override
     public void miseAJour(Monstre m, String evenement) {
-        // evenement peut être "attaque", "subit:10", "mort", ...
         if (evenement.startsWith("subit:")) {
             String dmg = evenement.substring("subit:".length());
             System.out.println(m.getNom() + " (id " + m.getId() + ") subit " + dmg + " dégâts. PV restants: " + m.getPV());
