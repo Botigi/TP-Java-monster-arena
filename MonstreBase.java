@@ -44,7 +44,7 @@ public abstract class MonstreBase implements Monstre {
 
     @Override
     public void subirDegats(int deg) {
-        if (this.pv <= 0) return; // déjà mort
+        if (this.pv <= 0) return;
         this.pv = Math.max(0, this.pv - deg);
         notifie("subit:" + deg);
         if (this.pv == 0) notifie("mort");
